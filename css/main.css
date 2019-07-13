@@ -1,0 +1,132 @@
+/*Altera codificação da página para aceitar caracteres especiais*/
+@charset "UTF-8";
+
+/*Para toda página atribui determinada fonte*/
+html{
+    font-family: sans-serif;
+}
+
+/*Para todos os títulos atribui determinada fonte*/
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oxygen";
+}
+
+/*Formata e estiliza os botões*/
+.button{
+    display: inline-block; /*Aplica-se "display: inline-block" pra ser possível atribuir as propriedades margin,padding etc*/
+    padding: .9em 2.5em;
+    background: #58c4c4;
+    border-radius: 5px; /* Propriedade adiciona bordas ao bloco*/
+    color:white;
+    text-decoration: none; /*Propriedade retira o sublinhado do texto*/
+}
+
+/*Atribui a pseudo classe dinâmica "hover" a todo elemento contido em .button*/
+.button:hover{
+    background: #37a0a0;
+}
+
+/*Alinhar o logotipo*/
+.top-header{
+    text-align: center; /*Imagem sendo um elemento de linha, aplica-se a propriedade center */ 
+}
+
+/*Ajuste de margin da imagem da logo*/
+.top-header-logo{
+    margin:.5em;
+}
+
+/*Formata e estiliza a barra de navegação(NAV)*/
+.top-nav{
+    background:#612674;
+    text-align: center;
+}
+
+/* Formata e estiliza todo conteúdo contido em .top-nav*/
+.top-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; /*Retira as bullets da ul*/
+}
+
+/*Formata e estiliza todos os elementos "a" contido em .top-nav*/
+.top-nav a{
+    color: white;
+    text-decoration: none; /*Retira o sublinhado*/
+    padding: 16px; /*Propriedade padding só pode ser aplicada em elementos de "block"*/
+    display: block;  /**/
+}
+
+/*Atribui a pseudo classe dinâmica "hover" a todo elemento contido em .top-nav*/
+.top-nav a:hover{
+    background: #7c3792;
+}
+
+
+/*Formata e estiliza a seção 1*/
+
+.top-content{
+    padding: 1em;
+    text-align: center;
+    background:#f6f6f6;
+}
+
+.top-content-title{
+    color: #612674;
+    font-size: 1.375em; /* transforma px para unidade de medida em (22/16)*/
+    margin: 1.375em;
+}
+
+.top-content-subtitle{
+    color: #a87bb7;
+    font-size: 1em;
+    line-height: 1.5; /*Propriedade que define o espaço entre as linhas*/
+}
+
+/*Formata e estiliza os icones*/
+.middle-content{
+    padding: 2em;
+    background:#f6f6f6;
+    text-align: center;
+}
+
+/* Formata e estiliza o título da classe*/
+.middle-content-title{
+    font-size: 1.25em;
+    color: #652e78;
+    text-transform: uppercase;
+}
+
+/*Formata todo conteúdo "p" dentro da classe .middle-content*/
+.middle-content p{
+    line-height: 1.5;
+    color: #222;
+}
+
+/*formata a tag span que contém o atributo class através do seletor de atributo*/
+.middle-content span[class^=icon] {
+    font-size: 3.5em;
+    color: #652e78;
+}
+
+/* Formata a classe main-content*/
+.main-content{
+    padding: 2em;
+}
+
+.main-content p{
+    line-height: 1.2;
+}
+
+.main-content-article{
+    margin-bottom: 3.5em;
+}
+
+.main-content-title{
+    letter-spacing: .2em;
+    text-align: center;
+    font-size: 1.25em;
+    color: #652e78;
+    text-transform: uppercase;
+    font-weight: normal;
+}
