@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6{
 
 /* Adiciona o pseudo elemento :after com a propriedade clear para redimensionar os elementos flutuantes*/
 
-.clearfix:after{
+.clearfix::after, .row::after{
     content: ' ';
     display: block;
     clear:both;
@@ -32,6 +32,16 @@ h1, h2, h3, h4, h5, h6{
 /*Atribui a pseudo classe dinâmica "hover" a todo elemento contido em .button*/
 .button:hover{
     background: #37a0a0;
+}
+
+/* Adiciona icone(imagem) ao top-content */
+.icon-play{
+    height:5em;
+}
+
+.icon-play img{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /*Alinhar o logotipo*/
@@ -61,7 +71,7 @@ h1, h2, h3, h4, h5, h6{
 .top-nav a{
     color: white;
     text-decoration: none; /*Retira o sublinhado*/
-    padding: 16px; /*Propriedade padding só pode ser aplicada em elementos de "block"*/
+    padding: 20px; /*Propriedade padding só pode ser aplicada em elementos de "block"*/
     display: block;  /**/
 }
 
@@ -181,45 +191,106 @@ h1, h2, h3, h4, h5, h6{
 
  @media screen and (min-width: 48.75em){ /* Transformar "px" para "em" 780px/16px*/
 
-        /**/
-        .top-header-logo{
-            float: left;
-        }
+    /* Redimensiona barra de navegação */
+    .top-header-logo{
+        float: left;
+    }
 
-        .top-nav{
-            background: transparent;
-            float: right;
-            margin-top: 27px;
-        }
+    .icon-play{
+        display: block;
+    }
 
-        .top-nav ul{
-            margin: 0;
-            padding: 0;
-        }
+    .top-nav{
+        background: transparent;
+        float: right;
+        margin-top: 27px;
+    }
 
-        .top-nav li{
-          display: inline-block;
+    .top-nav ul{
+        margin: 0;
+        padding: 0;
+    }
 
-        }
+    .top-nav li{
+        display: inline-block;
+    }
 
-        .top-nav a {
-            color: #713a84;
-        }
+    .top-nav a {
+        color: #713a84;
+    }
 
-        .top-nav a:hover {
-           background: #e7d9fc;
-        }
+    .top-nav a:hover {
+        background: #e7d9fc;
+    }
 
+    /* Formata a classe top-content para desktop */
+    .top-content{
+        background: #521a66;
+        color: white;
+    }
+    
+    .top-content-title, .top-content-subtitle{
+        color: white;
+    }
 
+    /* Dimensiona Grid para desktop */
 
-        /* Formata a classe top-content para desktop */
-        .top-content{
-            background: #521a66;
-            color: white;
-        }
-        
-        .top-content-title, .top-content-subtitle{
-            color: white;
-        }
+    .col-1_4{
+        width: 44%;
+        margin: 3%;
+        float: left;
+    }
+    
+    .main-content-article a {
+        float: right;
+    }
+ }   
 
-    }   
+ /* Dimensionamento para telas superiores a unidade de medida informada em (min-width:) */
+
+ @media screen and (min-width: 62.5em){ /* transformar "px" para "em" 1000px/16px */
+
+    .top-content{
+        background-color: #521a66;
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        background-position: center bottom;
+        height:20em;
+        padding-top: 17em;
+    }
+ }
+
+ /* Dimensionamento para telas superiores a unidade de medida informada em (min-width:)*/
+
+ @media screen and (min-width: 74em){
+     .top-content{
+        background-image: url(../images/bg_topo_1600x1374.jpg);
+         padding: 19em 15em 10em;
+         background-position: center top; /* Posionamento da imagem de background */
+         background-size: cover; /* Preenche a imagem 100% dentro do Container*/
+     }
+
+     .icon-play{
+         height: 8em; /* Define o tamanho do icone(imagem)*/
+     }
+
+     /* Formatar colunhas que pertencem a middle-content */
+     .col-1_4{
+        width: 23%; /* Distribui a classe em 4 colunas */
+        margin: 1%;
+     }
+
+     .col-1_2{
+         width:48%; /* Proporção da largura das colunas */
+         margin: 1%;
+         float: left;
+     }
+
+     .col-1_2 a{
+        float: none; /* Alinhamento dos botões da classe main-content */
+     }
+ }
+
+ 
+
+ 
+
