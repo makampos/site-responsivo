@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Oxygen";
 }
 
+/* Adiciona o pseudo elemento :after com a propriedade clear para redimensionar os elementos flutuantes*/
+
+.clearfix:after{
+    content: ' ';
+    display: block;
+    clear:both;
+}
+
 /*Formata e estiliza os botões*/
 .button{
     display: inline-block; /*Aplica-se "display: inline-block" pra ser possível atribuir as propriedades margin,padding etc*/
@@ -169,3 +177,49 @@ h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
 
+ /* CSS Responsivo */
+
+ @media screen and (min-width: 48.75em){ /* Transformar "px" para "em" 780px/16px*/
+
+        /**/
+        .top-header-logo{
+            float: left;
+        }
+
+        .top-nav{
+            background: transparent;
+            float: right;
+            margin-top: 27px;
+        }
+
+        .top-nav ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav li{
+          display: inline-block;
+
+        }
+
+        .top-nav a {
+            color: #713a84;
+        }
+
+        .top-nav a:hover {
+           background: #e7d9fc;
+        }
+
+
+
+        /* Formata a classe top-content para desktop */
+        .top-content{
+            background: #521a66;
+            color: white;
+        }
+        
+        .top-content-title, .top-content-subtitle{
+            color: white;
+        }
+
+    }   
